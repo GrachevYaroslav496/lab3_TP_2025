@@ -1,10 +1,12 @@
-package Builder
+package main
+
+import "OtherCode/TP/Patterns/Builder"
 
 func main() {
-	asusCollector := GetCollector("Asus")
-	applesCollector := GetCollector("Apple")
+	asusCollector := Builder.GetCollector("Asus")
+	applesCollector := Builder.GetCollector("Apple")
 
-	factory := NewFactory(asusCollector)
+	factory := Builder.NewFactory(asusCollector)
 
 	asusComputer := factory.CreateComputer()
 	asusComputer.Print()
